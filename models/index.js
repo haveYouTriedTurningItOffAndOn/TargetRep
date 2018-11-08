@@ -1,3 +1,4 @@
 module.exports = {
-  Book: require("./book")
+  user: require("./userInfo"),
+  logs: require("./loginfo")
 };
