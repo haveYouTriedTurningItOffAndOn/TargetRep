@@ -3,9 +3,9 @@ import React from "react";
 
 const Navbar = props => (
 
-    <aside className="menu">
+    <aside className="nav">
 
-        <ul className="menu-list">
+        <ul className="nav flex-column">
             <li>
                 <a
                     onClick={() => props.handlePageChange("Home")}
@@ -56,9 +56,10 @@ const Navbar = props => (
                 Videos
                 </a>
             </li>
+            <br/>
             <li>
-                <a class="day button is-primary">White</a>
-                <a class="night button is-dark">Dark</a>
+                <a className="day button is-primary">White</a>
+                <a className="night button is-dark">Dark</a>
             </li>
         </ul>
     </aside>

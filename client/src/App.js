@@ -39,25 +39,25 @@ class App extends Component {
     render() {
         return (
             <div>
-                <div>
+                <header className="container-fluid">
                     <Header />
                     <Login />
                     <Signup />
-                </div>
-                <div className="columns">
-                    <div className="column is-2">
+                </header>
+                <div className="container row">
+                    <div className="col-sm">
                         <Navbar
                             currentPage={this.state.currentPage}
                             handlePageChange={this.handlePageChange}
                         />
                     </div>
-                    <div>
+                    <div className="container-fluid col">
                         {this.renderPage()}
                     </div>
                 </div>
-                <div>
+                <footer className="row container-fluid">
                     <Footer />
-                </div>
+                </footer>
             </div>
         );
     };

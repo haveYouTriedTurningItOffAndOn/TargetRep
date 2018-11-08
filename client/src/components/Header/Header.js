@@ -6,7 +6,7 @@ class Header extends Component {
 
     render() {
         return (
-            <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row bd-navbar">
                 <a className="navbar-brand" href="#">
                     <img src="/images/benchPressIcon.png" alt=""></img>
                     Target Rep
