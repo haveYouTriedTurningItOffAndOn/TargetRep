@@ -45,7 +45,7 @@ class App extends Component {
                     <Signup />
                 </header>
                 <div className="container row">
-                    <div className="col-sm">
+                    <div className="col-xsm">
                         <Navbar
                             currentPage={this.state.currentPage}
                             handlePageChange={this.handlePageChange}

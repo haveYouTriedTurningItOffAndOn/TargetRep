@@ -5,34 +5,28 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="column">
-                    <div className="level">
-                        <div className="box column is-one-third">
+                <div className="container">
+                    <div className="row">
+                        <div className="col">
                             Weekly overview chart
                             </div>
-                        <div className="box column is-one-third">
+                        <div className="col">
                             Stuff?
                             </div>
-                        <div className="box column is-one-third">
-                            Last Entry
+                        <div className="col">
+                            Last Entry 
                             </div>
                     </div>
-                    <section className="hero is-medium is-primary is-bold">
-                        <div className="hero-body">
-                            <div className="container">
-                                <h1 className="title">
-                                    The only bad workout is the one that didn't happen.
-                                    </h1>
-                                <h2 className="subtitle">
-                                    Track your workouts!
-                                    </h2>
-                            </div>
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h1 class="display-4">The only bad workout is the one that didn't happen.</h1>
+                            <p class="lead">Track your workouts!</p>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
 
-                );
-            };
-        }
+        );
+    };
+}
 export default Home;
