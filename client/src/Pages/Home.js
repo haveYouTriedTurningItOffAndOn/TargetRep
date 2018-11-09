@@ -17,10 +17,10 @@ class Home extends Component {
                             Last Entry 
                             </div>
                     </div>
-                    <div class="jumbotron jumbotron-fluid">
-                        <div class="container">
-                            <h1 class="display-4">The only bad workout is the one that didn't happen.</h1>
-                            <p class="lead">Track your workouts!</p>
+                    <div className="jumbotron jumbotron-fluid">
+                        <div className="container">
+                            <h1 className="display-4">The only bad workout is the one that didn't happen.</h1>
+                            <p className="lead">Track your workouts!</p>
                         </div>
                     </div>
                 </div>

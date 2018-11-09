@@ -50,7 +50,6 @@ class Signup extends Component {
             this.setState({
                 name: "",
                 email: "",
-                emailVerify: "",
                 password: "",
                 passwordVerify: "",
             }))
@@ -59,102 +58,76 @@ class Signup extends Component {
     };
     render() {
         return (
-            <div id="signupModal" className="modal ">
-                <div className="modal-background "></div>
-                <div id="modal1" className="modal-content has-background-white-ter">
-                    <header className="modal-card-head">
-                        <p className="modal-card-title">Sign Up</p>
-                    </header>
-                    <div className="field">
-                        <label className="label ">Name</label>
-                        <div className="control has-icons-left">
-                            <input
-                                className="input"
-                                type="text"
-                                placeholder="Jane Doe"
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.handleInputChange}
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-user"></i>
-                            </span>
+            <div className="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" >Sign Up</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                    </div>
+                        <div className="modal-body">
+                            <form>
+                                <div className="form-group">
+                                    <label>Name</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="userName"
+                                        placeholder="Name"
+                                        name="name"
+                                        value={this.state.name}
+                                        onChange={this.handleInputChange}
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>Email address</label>
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        id="emailOne"
+                                        aria-describedby="emailHelp"
+                                        placeholder="FreeWeight@targetrep.com"
+                                        name="email"
+                                        value={this.state.email}
+                                        onChange={this.handleInputChange}
+                                    />
+                                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div className="form-group">
+                                    <label>Password</label>
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        id="exampleInputPassword1"
+                                        placeholder="Password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={this.handleInputChange}
 
-                    <div className="field">
-                        <label className="label">Email</label>
-                        <div className="control has-icons-left">
-                            <input
-                                className="input"
-                                type="email"
-                                placeholder="Weight@TargetRep.com"
-                                name="email"
-                                value={this.state.email}
-                                onChange={this.handleInputChange}
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-envelope"></i>
-                            </span>
-
+                                    />
+                                </div>
+                                <div className="form-group">
+                                    <label>Confirm Password</label>
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        id="exampleInputPassword1"
+                                        placeholder="Password"
+                                        name="passwordVerify"
+                                        value={this.state.passwordVerify}
+                                        onChange={this.handleInputChange}
+                                    />
+                                </div>
+                            </form>
                         </div>
-                        <p className="help">We will never release your email without permission.</p>
-                    </div>
-                    <div className="field">
-                        <label className="label ">Verify Email</label>
-                        <div className="control has-icons-left">
-                            <input
-                                className="input"
-                                type="email"
-                                placeholder="Weight@TargetRep.com"
-                                name="emailVerify"
-                                value={this.state.emailVerify}
-                                onChange={this.handleInputChange}
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-envelope"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Password</label>
-                        <div className="control  has-icons-left">
-                            <input
-                                className="input"
-                                type="text"
-                                placeholder="******"
-                                name="password"
-                                value={this.state.password}
-                                onChange={this.handleInputChange}
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-lock"></i>
-                            </span>
-
-                        </div>
-                        <p className="help">Must be at least 6 characters long.</p>
-                    </div>
-                    <div className="field">
-                        <label className="label ">Verify password</label>
-                        <div className="control has-icons-left">
-                            <input
-                                className="input"
-                                type="text"
-                                placeholder="******"
-                                name="passwordVerify"
-                                value={this.state.passwordVerify}
-                                onChange={this.handleInputChange}
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-lock"></i>
-                            </span>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" onClick={this.handleFormSubmit} data-dismiss="modal">Submit</button>
                         </div>
                     </div>
                 </div>
-                <div className="control">
-                    <button id="submitButton" className="button is-primary" onClick={this.handleFormSubmit} value="submit" >Submit</button>
-                </div>
-                <button id="closeModalButton" className="modal-close is-large" aria-label="close"></button>
             </div>
 
         );

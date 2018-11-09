@@ -24,57 +24,62 @@ class Login extends Component {
 
         //check if email is in DB. if so check if password is in same doc.
 
-        
+
         this.setState({ email: "", password: "" });
     };
 
     render() {
         return (
-            <div id="loginModal" className="modal">
-                <div className="modal-background"></div>
-                <div id="modal1" className="modal-content has-background-white-ter">
-                    <header className="modal-card-head">
-                        <p className="modal-card-title">Login</p>
-                    </header>
-                    <div className="field">
-                        <label className="label">Email</label>
-                        <div className="control has-icons-left" action="auth/Login" method="post">
-                            <input
-                                className="input"
-                                type="email"
-                                placeholder="Weight@TargetRep.com"
-                                name="email"
-                                value={this.state.email}
-                                onChange={this.handleInputChange}
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-envelope"></i>
-                            </span>
+            <div className="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title">Login</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
+                            <form>
+                                <div className="form-group">
+                                    <label>Email address</label>
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        id="exampleInputEmail1"
+                                        aria-describedby="emailHelp"
+                                        placeholder="Enter email"
+                                        name="email"
+                                        value={this.state.email}
+                                        onChange={this.handleInputChange}
+                                    />
+                                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div className="form-group">
+                                    <label>Password</label>
+                                    <input
+                                        type="password"
+                                        className="form-control"
+                                        id="exampleInputPassword1"
+                                        placeholder="Password"
+                                        name="password"
+                                        value={this.state.password}
+                                        onChange={this.handleInputChange}
+                                        
+                                    />
+                                    
 
+                                </div>
+                            </form>
                         </div>
-                    </div>
-                    <div className="field">
-                        <label className="label">Password</label>
-                        <div className="control has-icons-left">
-                            <input
-                                className="input"
-                                type="password"
-                                placeholder="******"
-                                name="password"
-                                value={this.state.password}
-                                onChange={this.handleInputChange}
-                            />
-                            <span className="icon is-small is-left">
-                                <i className="fas fa-lock"></i>
-                            </span>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" onClick={this.handleFormSubmit} data-dismiss="modal">Submit</button>
                         </div>
                     </div>
                 </div>
-                <div className="control">
-                    <button id="submitButton" className="button is-primary" onClick={this.handleFormSubmit} value="submit" >Submit</button>
-                </div>
-                <button id="closeButtonModal" className="modal-close is-large" aria-label="close"></button>
             </div>
+
 
         );
     }

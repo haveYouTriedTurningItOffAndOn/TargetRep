@@ -11,12 +11,12 @@ class Header extends Component {
                     <img src="/images/benchPressIcon.png" alt=""></img>
                     Target Rep
                 </a>
-                <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign-up</a>
+                <ul className="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                    <li className="nav-item">
+                        <button type="button" className="nav-link btn btn-secondary" data-toggle="modal"  data-target="#signUpModal">Sign-up</button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                    <li className="nav-item">
+                        <button type="button" className="nav-link btn btn-primary" data-toggle="modal"  data-target="#loginModal">Login</button>
                     </li>
                     
                 </ul>
