@@ -3,10 +3,9 @@ import React from "react";
 
 const Navbar = props => (
 
-    <aside className="nav">
-
+    <nav className="sidebar-sticky">
         <ul className="nav flex-column">
-            <li>
+            <li className="nav-item">
                 <a
                     onClick={() => props.handlePageChange("Home")}
                     className={
@@ -16,7 +15,7 @@ const Navbar = props => (
                     Home
                 </a>
             </li>
-            <li>
+            <li className="nav-item">
                 <a
                     onClick={() => props.handlePageChange("Logs")}
                     className={
@@ -26,7 +25,7 @@ const Navbar = props => (
                     Logs
                 </a>
             </li>
-            <li>
+            <li className="nav-item">
                 <a
                     onClick={() => props.handlePageChange("Courses")}
                     className={
@@ -36,7 +35,7 @@ const Navbar = props => (
                 Courses
                 </a>
                 </li>
-            <li>
+            <li className="nav-item">
                 <a
                     onClick={() => props.handlePageChange("Stats")}
                     className={
@@ -46,7 +45,7 @@ const Navbar = props => (
                 Stats
                 </a>
             </li>
-            <li>
+            <li className="nav-item">
                 <a
                     onClick={() => props.handlePageChange("Videos")}
                     className={
@@ -57,12 +56,12 @@ const Navbar = props => (
                 </a>
             </li>
             <br/>
-            <li>
+            <li className="nav-item">
                 <a className="day button is-primary">White</a>
                 <a className="night button is-dark">Dark</a>
             </li>
         </ul>
-    </aside>
+    </nav>
 
 );
 

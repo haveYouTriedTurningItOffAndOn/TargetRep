@@ -48,13 +48,13 @@ class App extends Component {
                     <WorkoutForm />
                 </header>
                 <div className="container row">
-                    <div className="col-xsm">
+                    <div className="col-md-2 d-none d-md-block bg-light sidebar">
                         <Navbar
                             currentPage={this.state.currentPage}
                             handlePageChange={this.handlePageChange}
                         />
                     </div>
-                    <div className="container-fluid col">
+                    <div className="col-md-9 ml-sm-auto col-lg-10 px-4">
                         {this.renderPage()}
                     </div>
                 </div>

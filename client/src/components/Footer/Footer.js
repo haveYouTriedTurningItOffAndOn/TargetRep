@@ -1,8 +1,8 @@
 import React from "react";
 
 const Footer = () => (
-    <footer className="container-fluid bg-dark">
-        Footer derp derp
+    <footer className="container-fluid fixed-bottom text-center bg-dark">
+        <p>Target Rep</p>
     </footer>
 
 );
