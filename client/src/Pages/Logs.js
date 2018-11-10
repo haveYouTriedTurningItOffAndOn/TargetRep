@@ -26,6 +26,7 @@ class Logs extends Component {
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                     </div>
                 </div>
+                <button type="button" className=" btn btn-primary" data-toggle="modal"  data-target="#workoutModal">Modal test</button>
             </div>
         );
     };

@@ -9,8 +9,10 @@ import Header from "./components/Header/Header";
 import Navbar from "./components/NavBar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Login from "./components/LoginModal/Login";
+import WorkoutForm from "./components/WorkoutForm/WorkoutForm";
 import Signup from "./components/SignupModal/Signup";
 import fourOhfour from "./Pages/404";
+
 
 class App extends Component {
     state = {
@@ -43,6 +45,7 @@ class App extends Component {
                     <Header />
                     <Login />
                     <Signup />
+                    <WorkoutForm />
                 </header>
                 <div className="container row">
                     <div className="col-xsm">

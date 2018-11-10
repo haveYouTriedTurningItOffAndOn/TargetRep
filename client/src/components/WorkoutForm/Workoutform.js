@@ -5,7 +5,7 @@ import "./Workoutform.css";
 
 // change to take props. set courses to have all methods
 
-class Workoutform extends Component {
+class WorkoutForm extends Component {
     state = {
         targetMuscleGroup: "",
         targetMuscle: "",
@@ -87,7 +87,7 @@ class Workoutform extends Component {
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary">Log my workout</button>
                         </div>
                     </div>
                 </div>
@@ -97,4 +97,4 @@ class Workoutform extends Component {
 }
 
 
-export default Workoutform;
+export default WorkoutForm;
