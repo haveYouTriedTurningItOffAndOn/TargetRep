@@ -46,78 +46,51 @@ class Workoutform extends Component {
 
     render() {
         return (
-            <div id="workOutForm" className="modal">
-                <div className="modal-background"></div>
-                <div id="modal1" className="modal-content">
-                    <header className="modal-card-head">
-                        <p className="modal-card-title">Workout Log</p>
-                    </header>
-                    <label className="label">Target Muslce Group</label>
-                    {/* Muscle dropdown */}
-                    <div className="field is-horizontal">
-                        <div className="field-label is-normal">
-                            <label className="label">Target Muscle</label>
+            <div class="modal fade" id="workoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Workout Log</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div className="field-body">
-                            <div className="field">
-                                <div className="control">
-                                    {/* use another component to create differnt muscle listings */}
-                                    <div className="select">
-                                        <select>
-                                            <option>Muscle 1</option>
-                                            <option>Muscle 2</option>
-                                            <option>Muscle 3</option>
-                                            <option>Muscle 4</option>
-                                        </select>
-                                    </div>
+                        <div class="modal-body">
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Target Muslce Group</label>
+                                <div class="col-sm-10">
+                                    <input type="text" readonly class="form-control-plaintext" value="Muscle Group A" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Target Muscle</label>
+                                <select class="form-control col-sm-10" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Weight</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" placeholder="000" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Repetitions</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" placeholder="000" />
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {/* reps */}
-                    <div className="field is-horizontal">
-                        <div className="field-label is-normal">
-                            <label className="label">Reps</label>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
-                        <div className="field-body">
-                            <div className="field">
-                                <div className="control">
-                                    <input className="input" type="text" placeholder="100"></input>
-                                </div>
-                                <p className="help">Total repetitions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    {/* weight */}
-                    <div className="field is-horizontal">
-                        <div className="field-label is-normal">
-                            <label className="label">Weight</label>
-                        </div>
-                        <div className="field-body">
-                            <div className="field">
-                                <div className="control">
-                                    <input className="input" type="text" placeholder="100"></input>
-                                </div>
-                                <p className="help">Weight in kgs.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* submit / cancel buttons */}
-                    <div className="field is-grouped is-grouped-centered">
-                        <p className="control">
-                            <a className="button is-primary">
-                                Submit
-                    </a>
-                        </p>
-                        <p className="control">
-                            <a className="closeWorkoutModal button is-light">
-                                Cancel
-                    </a>
-                        </p>
                     </div>
                 </div>
-                <button className="closeWorkoutModal modal-close is-large" aria-label="close"></button>
             </div>
         );
     };

@@ -7,26 +7,26 @@ class Stats extends Component {
 
     render() {
         return (
+
             <div>
-                <div class="column">
-                    <div class="level">
-                        <div class="box column">
-                            <BarChart />
-                            </div>
-                        <div class="box column ">
-                            <LineChart />
-                            </div>
+                <div class="row">
+                    <div class="col card">
+                        <BarChart />
                     </div>
-                    <div class="level">
-                        <div class="box column">
-                            <PieChart />
-                            </div>
-                        <div className="box column is-two-thirds ">
-                            <Table />
-                        </div>
+                    <div class="col card">
+                        <LineChart />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 card">
+                        <PieChart />
+                    </div>
+                    <div className="col-8 card">
+                        <Table />
                     </div>
                 </div>
             </div>
+
         );
     };
 }
