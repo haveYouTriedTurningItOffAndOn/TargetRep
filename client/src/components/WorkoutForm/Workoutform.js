@@ -57,9 +57,16 @@ class WorkoutForm extends Component {
                         </div>
                         <div class="modal-body">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Target Muslce Group</label>
+                                <label class="col-sm-2 col-form-label">Target Muscle Group</label>
                                 <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" value="Muscle Group A" />
+                                    <input 
+                                        type="text" 
+                                        readonly class="form-control-plaintext" 
+                                        value="Muscle Group A"
+                                        name="targetMuscleGroup"
+                                        value={this.state.targetMuscleGroup}
+                                        onChange={this.handleInputChange}
+                                    />
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -75,13 +82,27 @@ class WorkoutForm extends Component {
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Weight</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" placeholder="000" />
+                                    <input 
+                                        type="number" 
+                                        class="form-control" 
+                                        placeholder="000" 
+                                        name="weight"
+                                        value={this.state.weight}
+                                        onChange={this.handleInputChange}
+                                    />
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Repetitions</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control" placeholder="000" />
+                                    <input 
+                                        type="number" 
+                                        class="form-control" 
+                                        placeholder="000"
+                                        name="reps"
+                                        value={this.state.reps}
+                                        onChange={this.handleInputChange} 
+                                    />
                                 </div>
                             </div>
                         </div>
