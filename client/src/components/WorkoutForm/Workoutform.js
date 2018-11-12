@@ -14,6 +14,11 @@ class WorkoutForm extends Component {
 
     }
 
+    optionSelected = event => {
+        this.setState({targetMuscle:event.target.value});
+
+    }
+
     handleInputChange = event => {
         const { name, value } = event.target;
 
@@ -46,69 +51,73 @@ class WorkoutForm extends Component {
 
     render() {
         return (
-            <div class="modal fade" id="workoutModal" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Workout Log</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div className="modal fade" id="workoutModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title">Workout Log</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body">
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Target Muscle Group</label>
-                                <div class="col-sm-10">
-                                    <input 
-                                        type="text" 
-                                        readonly class="form-control-plaintext" 
+                        <div className="modal-body">
+                            <div className="form-group row">
+                                <label className="col-sm-2 col-form-label">Target Muscle Group</label>
+                                <div className="col-sm-10">
+                                    <input
+                                        type="text"
+                                        className="form-control-plaintext"
                                         value="Muscle Group A"
                                         name="targetMuscleGroup"
                                         value={this.state.targetMuscleGroup}
-                                        onChange={this.handleInputChange}
+                                        onChange={this.optionSelected}
                                     />
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Target Muscle</label>
-                                <select class="form-control col-sm-10" id="exampleFormControlSelect1">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
+                            <div className="form-group row">
+                                <label className="col-sm-2 col-form-label">Target Muscle</label>
+                                <select
+                                    className="form-control col-sm-10"
+                                    value={this.state.targetMuscle}
+                                    onChange={this.optionSelected}
+                                >
+                                        <option value="1" >1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
                                 </select>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Weight</label>
-                                <div class="col-sm-10">
-                                    <input 
-                                        type="number" 
-                                        class="form-control" 
-                                        placeholder="000" 
+                            <div className="form-group row">
+                                <label className="col-sm-2 col-form-label">Weight</label>
+                                <div className="col-sm-10">
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        placeholder="000"
                                         name="weight"
                                         value={this.state.weight}
                                         onChange={this.handleInputChange}
                                     />
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Repetitions</label>
-                                <div class="col-sm-10">
-                                    <input 
-                                        type="number" 
-                                        class="form-control" 
+                            <div className="form-group row">
+                                <label className="col-sm-2 col-form-label">Repetitions</label>
+                                <div className="col-sm-10">
+                                    <input
+                                        type="number"
+                                        className="form-control"
                                         placeholder="000"
                                         name="reps"
                                         value={this.state.reps}
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleInputChange}
                                     />
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Log my workout</button>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" className="btn btn-primary" onClick={this.handleFormSubmit} data-dismiss="modal">Log my workout</button>
                         </div>
                     </div>
                 </div>
