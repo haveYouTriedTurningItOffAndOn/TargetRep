@@ -5,25 +5,34 @@ class Logs extends Component {
     render() {
         return (
             <div className="card-deck">
-                <div className="card">
-                    <img className="card-img-top" src=".../100px200/" alt="Card image cap" />
+                <div className="card btn " data-toggle="modal"  data-target="#workoutModal" >
+                    <img className="card-img-top" src="./images/arms2.jpg" alt="Card image cap" />
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 className="card-title text-center">Arms</h5>
                     </div>
                 </div>
                 <div className="card">
-                    <img className="card-img-top" src=".../100px200/" alt="Card image cap" />
+                    <img className="card-img-top" src="./images/chest.jpg" alt="Card image cap" />
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <h5 className="card-title text-center">Chest</h5>
                     </div>
                 </div>
                 <div className="card">
-                    <img className="card-img-top" src=".../100px200/" alt="Card image cap" />
+                    <img className="card-img-top" src="./images/legs.jpg" alt="Card image cap" />
+                    <div className="card-body ">
+                        <h5 className="card-title text-center">Legs</h5>
+                    </div>
+                </div>
+                <div className="card">
+                    <img className="card-img-top" src="./images/core.jpg" alt="Card image cap" />
                     <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        <h5 className="card-title text-center">Core</h5>
+                    </div>
+                </div>
+                <div className="card">
+                    <img className="card-img-top" src="./images/back.jpg" alt="Card image cap" />
+                    <div className="card-body">
+                        <h5 className="card-title text-center">Back</h5>
                     </div>
                 </div>
                 <button type="button" className=" btn btn-primary" data-toggle="modal"  data-target="#workoutModal">Modal test</button>

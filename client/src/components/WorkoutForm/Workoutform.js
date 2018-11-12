@@ -67,7 +67,6 @@ class WorkoutForm extends Component {
                                     <input
                                         type="text"
                                         className="form-control-plaintext"
-                                        value="Muscle Group A"
                                         name="targetMuscleGroup"
                                         value={this.state.targetMuscleGroup}
                                         onChange={this.optionSelected}
