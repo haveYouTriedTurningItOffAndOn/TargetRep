@@ -6,7 +6,7 @@ const Navbar = props => (
     <nav className="sidebar-sticky">
         <ul className="nav flex-column">
             
-            <li className="nav-item btn btn-outline-primary">
+            <li className="nav-item btn btn-outline-dark">
                 <a
                     onClick={() => props.handlePageChange("Logs")}
                     className={
@@ -16,7 +16,7 @@ const Navbar = props => (
                     Logs
                 </a>
             </li>
-            <li className="nav-item btn btn-outline-primary">
+            <li className="nav-item btn btn-outline-dark">
                 <a
                     onClick={() => props.handlePageChange("Courses")}
                     className={
@@ -26,7 +26,7 @@ const Navbar = props => (
                 Courses
                 </a>
                 </li>
-            <li className="nav-item btn btn-outline-primary">
+            <li className="nav-item btn btn-outline-dark">
                 <a
                     onClick={() => props.handlePageChange("Stats")}
                     className={
@@ -36,7 +36,7 @@ const Navbar = props => (
                 Stats
                 </a>
             </li>
-            <li className="nav-item btn btn-outline-primary">
+            <li className="nav-item btn btn-outline-dark">
                 <a
                     onClick={() => props.handlePageChange("Videos")}
                     className={
