@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import WorkoutForm from "../components/WorkoutForm/WorkoutForm";
 
 class Logs extends Component {
 
     render() {
         return (
             <div className="card-deck">
+            <WorkoutForm />
                 <div className="card btn " data-toggle="modal"  data-target="#workoutModal" value="Arms" >
                     <img className="card-img-top" src="./images/arms2.jpg" alt="Card image cap" />
                     <div className="card-body">

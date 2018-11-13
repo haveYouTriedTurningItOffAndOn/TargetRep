@@ -42,7 +42,10 @@ class App extends Component {
         return (
             <div>
                 <header className="container-fluid">
-                    <Header />
+                    <Header
+                        currentPage={this.state.currentPage}
+                        handlePageChange={this.handlePageChange}
+                    />
                     <Login />
                     <Signup />
                     <WorkoutForm />

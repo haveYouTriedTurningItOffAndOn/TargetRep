@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import WorkoutForm from "../components/WorkoutForm/WorkoutForm";
 
 
 class Courses extends Component {
@@ -9,8 +8,8 @@ class Courses extends Component {
     render() {
         return (
             <div className="container-fluid">
-                <WorkoutForm />
-                {/* row 1 */}
+               
+                
                 <div className="row bg-dark">
                     <div className="col">
                         <img src="/images/benchPressIcon.png" alt=""></img>
@@ -22,7 +21,7 @@ class Courses extends Component {
                         <img src="/images/benchPressIcon.png" alt=""></img>
                     </div>
                 </div>
-                {/* row 2 */}
+                
                 <div className="row">
                     <div className="col">
                         <img src="/images/benchPressIcon.png" alt=""></img>
@@ -34,7 +33,7 @@ class Courses extends Component {
                         <img src="/images/benchPressIcon.png" alt=""></img>
                     </div>
                 </div>
-                {/* row 3 */}
+                
                 <div className="row bg-dark">
 
                     <div className="courseButton col">
@@ -51,4 +50,5 @@ class Courses extends Component {
         );
     };
 }
+
 export default Courses;
