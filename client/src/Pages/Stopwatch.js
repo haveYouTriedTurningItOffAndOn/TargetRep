@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
 
-class Videos extends Component {
+class Stopwatch extends Component {
 
     render() {
         return (
             <div>
                     <div className="column">
-                        <p>insert components in this div</p>
+                        <p>need to create stopwatch</p>
                     </div>
             </div>
         );
     };
 }
-export default Videos;
+export default Stopwatch;

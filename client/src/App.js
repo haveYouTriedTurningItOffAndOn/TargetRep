@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Courses from "./Pages/Courses";
 import Logs from "./Pages/Logs";
 import Stats from "./Pages/Stats";
-import Videos from "./Pages/Videos";
+import Stopwatch from "./Pages/Stopwatch";
 import Header from "./components/Header/Header";
 import Navbar from "./components/NavBar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -32,8 +32,8 @@ class App extends Component {
             return <Stats />;
         } else if (this.state.currentPage === "Logs") {
             return <Logs />;
-        }else if (this.state.currentPage === "Videos") {
-            return <Videos />;
+        }else if (this.state.currentPage === "Stopwatch") {
+            return <Stopwatch />;
         }else {
             return <fourOhfour />;
         }

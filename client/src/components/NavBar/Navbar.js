@@ -38,12 +38,12 @@ const Navbar = props => (
             </li>
             <li className="nav-item btn btn-outline-dark">
                 <a
-                    onClick={() => props.handlePageChange("Videos")}
+                    onClick={() => props.handlePageChange("Stopwatch")}
                     className={
-                        props.currentPage === "Videos" ? "nav-link active" : "nav-link"
+                        props.currentPage === "Stopwatch" ? "nav-link active" : "nav-link"
                     }
                 >
-                Videos
+                Stopwatch
                 </a>
             </li>
             <br/>

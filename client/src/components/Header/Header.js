@@ -2,10 +2,10 @@ import React from "react";
 
 const Header = props => (
     <nav className="navbar navbar-expand navbar-dark bg-dark flex-column flex-md-row bd-navbar">
-        <a className="navbar-brand"
+        <a
             onClick={() => props.handlePageChange("Home")}
             className={
-                props.currentPage === "Home" ? "nav-link active" : "nav-link"
+                props.currentPage === "Home navbar-brand" ? "nav-link active" : "nav-link"
             }
         >
             <img src="/images/benchPressIcon.png" alt=""></img>

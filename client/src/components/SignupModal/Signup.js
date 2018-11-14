@@ -58,7 +58,7 @@ class Signup extends Component {
     };
     render() {
         return (
-            <div className="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div className="modal fade" id="signUpModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -100,7 +100,7 @@ class Signup extends Component {
                                     <input
                                         type="password"
                                         className="form-control"
-                                        id="exampleInputPassword1"
+                                        
                                         placeholder="Password"
                                         name="password"
                                         value={this.state.password}
@@ -113,7 +113,7 @@ class Signup extends Component {
                                     <input
                                         type="password"
                                         className="form-control"
-                                        id="exampleInputPassword1"
+                                        
                                         placeholder="Password"
                                         name="passwordVerify"
                                         value={this.state.passwordVerify}
