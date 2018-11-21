@@ -9,16 +9,16 @@ class Stats extends Component {
         return (
 
             <div>
-                <div class="row">
-                    <div class="col card">
+                <div className="row">
+                    <div className="col card">
                         <BarChart />
                     </div>
-                    <div class="col card">
+                    <div className="col card">
                         <LineChart />
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4 card">
+                <div className="row">
+                    <div className="col-4 card">
                         <PieChart />
                     </div>
                     <div className="col-8 card">
