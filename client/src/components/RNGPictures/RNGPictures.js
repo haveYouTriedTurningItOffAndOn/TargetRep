@@ -1,13 +1,18 @@
 import React, { Component } from "react";
+import { PromiseProvider } from "mongoose";
 
 
 
 class RNGPictures extends Component {
 
-    randomNumber = Math.floor((Math.random()*10)+1);
+    state= {
+        workout: "",
+        workoutImage: "",
+    };
+
 
     workOuts = [
-        
+
         {name: "5 Minute Plank", image: "5plank.jpg"},
         {name: "15 Minute Morning Workout", image: "15morning.jpg"},
         {name: "1000 Kicks", image: "1000kicks.jpg"},
@@ -31,21 +36,25 @@ class RNGPictures extends Component {
 
     ];
 
+    exampleGiven = props => {
+        return <img src= {props.image}></img>
+    }
+
     handleFormSubmit = event => {
         event.preventDefault();
-        alert("heres your random workout")
-
-
+        let item = Math.floor((Math.random()*this.workOuts.length))
+        
+        
     };
 
 
     render(){
         return(
             <div>
-
+            <div id="courses"></div>
             <button 
                 type="button" 
-                class="btn btn-outline-dark"
+                className="btn btn-outline-dark"
                 onClick={this.handleFormSubmit}
             >
             Random Workout

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import RNGPictures from "../components/RNGPictures/RNGPictures";
 
 class Courses extends Component {
 
@@ -8,44 +8,9 @@ class Courses extends Component {
     render() {
         return (
             <div className="container-fluid">
-               
+                < RNGPictures /> 
                 
-                <div className="row bg-dark">
-                    <div className="col">
-                        <img src="/images/benchPressIcon.png" alt=""></img>
-                    </div>
-                    <div className="courseButton col">
-                        <img src="/images/benchPressIcon.png" alt=""></img>
-                    </div>
-                    <div className="courseButton col">
-                        <img src="/images/benchPressIcon.png" alt=""></img>
-                    </div>
-                </div>
                 
-                <div className="row">
-                    <div className="col">
-                        <img src="/images/benchPressIcon.png" alt=""></img>
-                    </div>
-                    <div className="courseButton col">
-                        <img src="/images/benchPressIcon.png" alt=""></img>
-                    </div>
-                    <div className="courseButton col">
-                        <img src="/images/benchPressIcon.png" alt=""></img>
-                    </div>
-                </div>
-                
-                <div className="row bg-dark">
-
-                    <div className="courseButton col">
-                        <img src="/images/icons8-ereader-50.png" alt=""></img>
-                    </div>
-                    <div className="courseButton col">
-                        <img src="/images/icons8-ereader-50.png" alt=""></img>
-                    </div>
-                    <div className="courseButton col">
-                        <img src="/images/icons8-ereader-50.png" alt=""></img>
-                    </div>
-                </div>
             </div>
         );
     };
