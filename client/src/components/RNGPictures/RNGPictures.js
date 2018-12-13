@@ -43,10 +43,13 @@ class RNGPictures extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         let item = Math.floor((Math.random()*this.workOuts.length))
+        console.log(item)
         
-        
-    };
-
+       for(i=0, i=item){
+            workout = this.workOuts[i].name;
+            workoutImage = this.workOuts[i].image
+        };
+    }
 
     render(){
         return(
